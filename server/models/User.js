@@ -44,9 +44,9 @@ const userSchema = new Schema({
     phones : 
     [
         {
-            tags : [ "string" ],
-            number : "string" ,
-            notes : "string"
+            tags : [ String ],
+            number : String ,
+            notes : String
         }
     ],
 	password: {
