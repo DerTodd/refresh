@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const secret = 'texasfight';
+const secret = process.env.REACT_APP_SECRET;
 const expiration = '2h';
 
 

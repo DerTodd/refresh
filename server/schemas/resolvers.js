@@ -14,14 +14,15 @@ const resolvers = {
         if (context.user) {
           return User.findOne({ _id: context.user._id });
         }
-        throw new AuthenticationError("You need to be logged in!");
+        throw new AuthenticationError("Please log in!");
       },
 
   Mutation: {
     addUser: async (parent, args) => {
         const user = await User.create(args);
-        const token = signToken(user);
-        return { token, user };
+        // const token = signToken(user);
+        // return { token, user };
+        alert("User has been added");
       },
       login: async (parent, { email, password }) => {
         const user = await User.findOne({ email });
